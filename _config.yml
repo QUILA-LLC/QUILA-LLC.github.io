@@ -21,14 +21,11 @@
 title: Quila
 email: info@quila.today
 description: >- # this means to ignore newlines until "baseurl:"
-  Quila LLC embodies a spirit of technological exploration and innovation, 
-  inspired by the adventurous essence of sailing. 
-  It aims to explore the tech frontier, creating impactful projects that 
-  push boundaries and foster a sense of limitless potential.
+  Quila LLC, 2024
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://quila.today" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: xxx
-github_username: xxx
+# twitter_username: xxx
+# github_username: xxx
 
 # Build settings
 theme: minima
