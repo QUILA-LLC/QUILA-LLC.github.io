@@ -1,0 +1,137 @@
+.phone-frame {
+  width: 260px;
+  height: 480px;
+  border: 16px black solid;
+  border-top: 14px black solid;
+  border-bottom: 60px black solid;
+  border-radius: 24px;
+  position: relative;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  z-index: 100;
+}
+
+.phone-screen {
+  width: 100%;
+  height: 106%;
+  background-color: #ece5dd;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.chat-header {
+  background-color: #075e54;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: -5px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.chat-header img {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.chat-header span {
+  font-size: 1.2rem;
+}
+
+.chat-messages {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 130px);
+  overflow-y: auto;
+  background-color: #ece5dd;
+  background-size: cover;
+  background-position: center;
+  margin-top: 70px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+  max-width: 80%;
+  padding: 10px 15px;
+  border-radius: 7.5px;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.3;
+  word-wrap: break-word;
+  animation: fadeIn 1s ease-out;
+}
+
+.chat-message p {
+  line-height: 1.2;
+  margin: 5px 0;
+}
+
+.message-sent {
+  background-color: #dcf8c6;
+  align-self: flex-end;
+  border-radius: 7.5px 7.5px 0 7.5px;
+}
+
+.message-received {
+  background-color: white;
+  align-self: flex-start;
+  border: 1px solid #ddd;
+  border-radius: 7.5px 7.5px 7.5px 0;
+}
+
+.message-input {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: white;
+  border-top: 1px solid #ddd;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+.message-input input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+}
+
+.message-input button {
+  background-color: #25d366;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.message-input button i {
+  font-size: 1.2rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

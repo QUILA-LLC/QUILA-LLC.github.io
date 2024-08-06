@@ -1,0 +1,97 @@
+/* src/assets/styles/App.css or src/assets/styles/CustomStyles.css */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  overflow-y: auto; /* Ensure scrolling */
+}
+
+.hero {
+  text-align: center;
+  margin-top: 120px; /* Increased space */
+}
+
+.hero-title {
+  font-size: 3.0rem;
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-top: 10px; /* Decrease this value to reduce the space */
+  margin-bottom: 20px; /* Adjust if needed */
+}
+
+.hero p {
+  font-size: 2.0rem;
+  margin: 10px 0 10px;
+}
+
+.learning-section .learning-title {
+  font-size: 2rem; /* Adjust as needed */
+  margin: 0;
+  padding: 10px 0; /* Adjust the padding values as needed */
+  text-align: center;
+}
+
+.learning-section .learning-subtitle {
+  font-size: 1.2rem; /* Adjust as needed */
+  margin: 0;
+  padding: 5px 0; /* Adjust the padding values as needed */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.learning-section .chat-interface {
+  margin-bottom: 20px; /* Increase this value to increase the distance */
+}
+
+.learning-section .learning-footer {
+  font-size: 1.2rem; /* Adjust as needed */
+  margin: 0;
+  padding: 20px 0 0 0; /* Increase the top padding to create more space */
+  text-align: center;
+}
+
+@keyframes fadeInBadge {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeOutBadge {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
+
+@keyframes fadeInText {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}

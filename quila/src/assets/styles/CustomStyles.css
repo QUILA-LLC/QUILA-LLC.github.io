@@ -1,0 +1,217 @@
+:root {
+  --main-font-size: 1.2rem; /* Base font size relative to the root font size */
+  --heading-font-size: 3.5rem;
+  --color-black: #000000;
+  --color-dark: #333333;
+  --color-maroon: #800000;
+  --bg-whatsapp: #dcf8c6;
+  --transition-duration: 0.3s;
+  font-size: 16px; /* Set the root font size */
+}
+
+/* Keyframes for the animations */
+@keyframes showNotification {
+  0% { opacity: 0; transform: scale(0); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes hideNotification {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0); }
+}
+
+@keyframes showMessage {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* WhatsApp icon */
+.whatsapp-icon-anim {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+/* Notification badge animation */
+.notification-badge-anim {
+  animation: showNotification 0.5s ease-in-out forwards, hideNotification 1.0s 0.5s ease-in-out forwards;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  z-index: 2;
+}
+
+/* Message text animation */
+.message-text-anim {
+  animation: showMessage 0.5s 1s ease-in-out forwards;
+  opacity: 0;
+  background-color: var(--bg-whatsapp);
+  padding: 0.9375rem 1.25rem; /* 15px 20px */
+  border-radius: 1.25rem; /* 20px */
+  margin-left: 10px;
+  display: inline-block;
+  z-index: 0;
+  font-size: 1.6rem;
+  color: var(--color-black);
+  text-align: center;
+}
+
+/* General styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+/* Top section */
+.top-section {
+  position: relative;
+  padding-bottom: 3.125rem; /* 50px */
+}
+
+.top-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/Background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+/* Hero section */
+.hero {
+  margin-top: 6.25rem; /* 100px */
+  color: var(--color-maroon);
+  position: relative;
+}
+
+.hero h1 {
+  font-size: var(--heading-font-size);
+  margin: 0;
+}
+
+.hero p {
+  font-size: var(--main-font-size);
+  margin: 0.625rem 0 1.875rem; /* 10px 0 30px */
+}
+
+/* QR section */
+.qr-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3.125rem 0; /* 50px 0 */
+}
+
+.qr-code {
+  width: 160px;
+  height: 160px;
+  margin-top: 5rem; /* 80px */
+}
+
+.qr-message {
+  position: relative;
+  margin-top: 0.625rem; /* 10px */
+  background-color: var(--bg-whatsapp);
+  padding: 0.625rem 0.9375rem; /* 10px 15px */
+  border-radius: 10px;
+  font-size: var(--main-font-size);
+  font-weight: bold;
+  color: var(--color-whatsapp);
+  display: inline-block;
+}
+
+.qr-message::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid var(--bg-whatsapp);
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+/* Connect message wrapper */
+.connect-message-wrapper {
+  text-align: center;
+  margin-top: 1.25rem; /* 20px */
+}
+
+/* Message parts */
+.message-part1, .message-part2 {
+  display: block;
+}
+
+.message-part1 {
+  font-size: 1.5rem;
+  color: var(--color-black);
+  margin-top: 0.625rem; /* 10px */
+}
+
+.message-part2 {
+  font-size: 1.8rem;
+  color: var(--color-dark);
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.message-part2 .whatsapp-color-icon {
+  margin-left: 10px;
+  width: 80px;
+  height: 80px;
+  vertical-align: middle;
+  margin-bottom: 8px;
+}
+
+.message-part2 .whatsapp-color-icon:hover {
+  opacity: 0.7;
+}
+
+/* Learning message */
+.learning-message {
+  display: flex;
+  align-items: center;
+}
+
+.learning-message .whatsapp-icon {
+  position: relative;
+  margin-right: -30px;
+  z-index: 1;
+}
+
+.learning-message .whatsapp-icon img {
+  width: 100px;
+  height: 100px;
+  vertical-align: middle;
+}
+
+/* Learning section */
+.learning-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  padding: 3.125rem 0; /* 50px 0 */
+  position: relative;
+  z-index: 1;
+}
